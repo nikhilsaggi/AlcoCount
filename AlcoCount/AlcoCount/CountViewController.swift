@@ -172,7 +172,9 @@ class CountViewController: UIViewController, saveButtonDelegate, submitButtonDel
         if(0.15 < BAC && BAC < 0.19){
             fluidView.fillColor = UIColor(red: 247/255, green: 176/255, blue: 84/255, alpha: 1.0)
             fluidView.strokeColor = UIColor(red: 247/255, green: 176/255, blue: 84/255, alpha: 1.0)
-            getAPI()
+            if(username != nil){
+                getAPI()
+            }
         }
         if(0.19 < BAC && BAC < 0.24){
             fluidView.fillColor = UIColor(red: 252/255, green: 130/255, blue: 42/255, alpha: 1.0)
